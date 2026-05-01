@@ -4,26 +4,26 @@ from dotenv import load_dotenv
 load_dotenv(path.join(path.dirname(path.dirname(__file__)), "config.env"))
 
 class Telegram:
-    API_ID = int(getenv("API_ID", "0"))
-    API_HASH = getenv("API_HASH", "")
-    BOT_TOKEN = getenv("BOT_TOKEN", "")
+    API_ID = int(getenv("API_ID", "22977776"))
+    API_HASH = getenv("API_HASH", "2ac7223d720bdeec757cbc88ced57224")
+    BOT_TOKEN = getenv("BOT_TOKEN", "8754520184:AAGYefPVOVark8YE0m1pnLrPKv_9e2VWBJM")
     HELPER_BOT_TOKEN = getenv("HELPER_BOT_TOKEN", "")
 
-    BASE_URL = getenv("BASE_URL", "").rstrip('/')
-    PORT = int(getenv("PORT", "8000"))
+    BASE_URL = getenv("BASE_URL", "https://tgstremio-80a99d94a17a.herokuapp.com/").rstrip('/')
+    PORT = int(getenv("PORT", "8080"))
 
-    PARALLEL = int(getenv("PARALLEL", "1"))
-    PRE_FETCH = int(getenv("PRE_FETCH", "1"))
+    PARALLEL = int(getenv("PARALLEL", ""))
+    PRE_FETCH = int(getenv("PRE_FETCH", ""))
 
-    AUTH_CHANNEL = [channel.strip() for channel in (getenv("AUTH_CHANNEL") or "").split(",") if channel.strip()]
-    DATABASE = [db.strip() for db in (getenv("DATABASE") or "").split(",") if db.strip()]
+    AUTH_CHANNEL = [channel.strip() for channel in (getenv("AUTH_CHANNEL") or "-1003974332689").split(",") if channel.strip()]
+    DATABASE = [db.strip() for db in (getenv("DATABASE") or "mongodb+srv://jeevanantham8157:1055221@tamizhzone.b0bx6bx.mongodb.net/?appName=TamizhZone,mongodb+srv://jeevanantham8157:1055221@itzheartbot1.63xqs.mongodb.net/?appName=Itzheartbot1").split(",") if db.strip()]
 
-    TMDB_API = getenv("TMDB_API", "")
+    TMDB_API = getenv("TMDB_API", "57d8345a6dd40ec2ca3cc43ba707457c")
 
     UPSTREAM_REPO = getenv("UPSTREAM_REPO", "")
     UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "")
 
-    OWNER_ID = int(getenv("OWNER_ID", "5422223708"))
+    OWNER_ID = int(getenv("OWNER_ID", "8537200428"))
     
     REPLACE_MODE = getenv("REPLACE_MODE", "true").lower() == "true"
     HIDE_CATALOG = getenv("HIDE_CATALOG", "false").lower() == "true"
